@@ -5,9 +5,39 @@ There are three folders in this repo: code, source_file and output_file. All of 
 Code files:
 -----------
 1. create_addresses_shapefiles.py
+
 It takes addresses ('pre_addresses') shapefiles and add closest water towers and closest transformers of each of the households to create a new addresses shapefiles. The name of the columns may not seem standard but they are intentionally kept like this so that we can match the file names used in the model. Later, they can be changed (both here and in the model) to a more standardized titles with complete words, all small caps, etc.
 
+Path of the Input files:
+
+../
+
+
+Path of the Generated file(s):
+
+../
 2. create_hospital_shapefiles.py
+
 It takes hospital info in a CSV file and creates the appropriate shapefiles from it. The format of the source file can be seen here: source_file/gdansk/hospitals.csv
 
-3. 
+Path of the Input files:
+
+../
+
+
+Path of the Generated file(s):
+
+../
+
+3. move_resources_on_the_road_network.py and RN.py
+
+'RN' is a helper file invoked when we call the 'move_resources_on_the_road_network' file. This file sets the road shapefiles first and then moves the contents of other files (in this case, households) on the road network and generates a corresponding new file. For example, if we want to move households on the road network, we need both roads and household shapefiles. This code will move each household to the appropriate position on the road network and save that as a new file. The same code can be repurposed to move anything on the road network with valid latitude and longitude. It will append '_moved' at the end of the initial file name while saving the newly generated one.
+
+Path of the Input files:
+
+../
+
+
+Path of the Generated file(s):
+
+../
