@@ -46,3 +46,17 @@ Path of the Generated file(s):
 
 ../../output_file/gdansk/[FILE NAME]_moved.shp
 
+4. unpack_roads.py
+
+It takes simplified high-resolution edge shapefiles representing roads and creates the appropriate output shapefiles. The original file's line strings had multiple points, each representing a road with multiple points. The unpacking is done in a way so that each of the consecutive pairs will have a separate entry in the output file.
+
+Path of the Input files:
+
+../../source_file/gdansk/SimplifiedHighResEdges.shp
+
+
+Path of the Generated file(s):
+
+../../output_file/gdansk/roads.shp
+
+
