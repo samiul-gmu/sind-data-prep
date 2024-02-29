@@ -22,7 +22,10 @@ edges = []
 for i in range(0, len(gdf)):
     points = list(gdf["geometry"][i].coords)
     for j in range(1, len(points)):
-        line = LineString(points)
+        #print(j)
+        segment = [points[j-1]]
+        segment.append(points[j])
+        line = LineString(segment)
         edges.append(line)
         fids.append(gdf["_FID"][i])
 
